@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Notes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <img src="logo.jpeg" class="logo">
+
+        <h1>Upload Notes</h1>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="notes.html">Notes</a>
+
+            <a href="upload.html">Upload</a>
+
+            <a href="faculty.html">Faculty</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h2>📤 Share Your Notes</h2>
+
+        <p>
+            Help fellow students by uploading
+            useful study materials.
+        </p>
+
+    </section>
+
+    <!-- UPLOAD FORM -->
+
+    <div class="form-container">
+
+        <h2 style="text-align:center;">
+            Upload Study Material
+        </h2>
+
+        <br>
+
+        <input
+            type="text"
+            id="noteTitle"
+            placeholder="Enter Note Title"
+        >
+
+        <select id="noteSubject">
+
+            <option value="">
+                Select Subject
+            </option>
+
+            <option value="Mathematics">
+                Mathematics
+            </option>
+
+            <option value="Physics">
+                Physics
+            </option>
+
+            <option value="Chemistry">
+                Chemistry
+            </option>
+
+            <option value="Programming">
+                Programming
+            </option>
+
+            <option value="Electronics">
+                Electronics
+            </option>
+
+        </select>
+
+        <input
+            type="text"
+            id="noteLink"
+            placeholder="Enter PDF Link"
+        >
+
+        <button
+            class="primary-btn"
+            onclick="saveNote()">
+
+            Upload Notes
+
+        </button>
+
+    </div>
+
+    <!-- GUIDELINES -->
+
+    <section class="announcement">
+
+        <h2>📋 Upload Guidelines</h2>
+
+        <br>
+
+        <ul>
+
+            <li>
+                Upload only educational materials.
+            </li>
+
+            <li>
+                Ensure PDF links are working.
+            </li>
+
+            <li>
+                Use proper subject names.
+            </li>
+
+            <li>
+                Avoid duplicate notes.
+            </li>
+
+            <li>
+                Respect copyright rules.
+            </li>
+
+        </ul>
+
+    </section>
+
+    <!-- RECENTLY UPLOADED -->
+
+    <section>
+
+        <center>
+
+            <h2>
+                📚 Recently Uploaded Notes
+            </h2>
+
+        </center>
+
+        <br>
+
+        <div
+            id="recentUploads"
+            class="notes-container">
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="stats">
+
+        <div class="stat-box">
+
+            <h2>📤</h2>
+
+            <p>
+                Easy Upload
+            </p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>📚</h2>
+
+            <p>
+                Share Knowledge
+            </p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>🎓</h2>
+
+            <p>
+                Help Students
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>College Notes Portal</h3>
+
+        <br>
+
+        <p>
+            Share Knowledge • Build Community
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 All Rights Reserved
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

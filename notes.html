@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes Library</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <img src="logo.jpeg" class="logo">
+
+        <h1>Notes Library</h1>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="notes.html">Notes</a>
+
+            <a href="upload.html">Upload</a>
+
+            <a href="faculty.html">Faculty</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <!-- PAGE TITLE -->
+
+    <section class="hero">
+
+        <h2>📖 Study Materials</h2>
+
+        <p>
+            Search, Preview and Download Notes
+        </p>
+
+    </section>
+
+    <!-- SEARCH -->
+
+    <input
+        type="text"
+        id="searchBox"
+        class="search-box"
+        placeholder="Search Notes..."
+    >
+
+    <!-- FILTER BUTTONS -->
+
+    <div class="filter-buttons">
+
+        <button
+            class="primary-btn"
+            onclick="filterNotes('all')">
+
+            All
+
+        </button>
+
+        <button
+            class="primary-btn"
+            onclick="filterNotes('math')">
+
+            Mathematics
+
+        </button>
+
+        <button
+            class="primary-btn"
+            onclick="filterNotes('physics')">
+
+            Physics
+
+        </button>
+
+        <button
+            class="primary-btn"
+            onclick="filterNotes('chemistry')">
+
+            Chemistry
+
+        </button>
+
+        <button
+            class="primary-btn"
+            onclick="filterNotes('programming')">
+
+            Programming
+
+        </button>
+
+    </div>
+
+    <!-- NOTES -->
+
+    <section class="notes-container">
+
+        <!-- MATH -->
+
+        <div
+            class="card note-card"
+            data-subject="math">
+
+            <img src="math.jpeg">
+
+            <h2>Mathematics</h2>
+
+            <p>Unit 1 Complete Notes</p>
+
+            <a
+                href="mathematics-unit1.pdf"
+                class="download-btn"
+                target="_blank"
+                onclick="increaseDownload('math')">
+
+                Download
+
+            </a>
+
+            <br><br>
+
+            <button
+                class="secondary-btn"
+                onclick="window.open('mathematics-unit1.pdf')">
+
+                Preview PDF
+
+            </button>
+
+            <br><br>
+
+            <p id="mathCount">
+                Downloads: 0
+            </p>
+
+            <div class="stars">
+
+                <span
+                    class="star"
+                    onclick="rateNote('math',1)">
+                    ⭐
+                </span>
+
+                <span
+                    class="star"
+                    onclick="rateNote('math',2)">
+                    ⭐
+                </span>
+
+                <span
+                    class="star"
+                    onclick="rateNote('math',3)">
+                    ⭐
+                </span>
+
+                <span
+                    class="star"
+                    onclick="rateNote('math',4)">
+                    ⭐
+                </span>
+
+                <span
+                    class="star"
+                    onclick="rateNote('math',5)">
+                    ⭐
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- PHYSICS -->
+
+        <div
+            class="card note-card"
+            data-subject="physics">
+
+            <img src="physics.jpeg">
+
+            <h2>Physics</h2>
+
+            <p>Unit 1 Complete Notes</p>
+
+            <a
+                href="physics-unit1.pdf"
+                class="download-btn"
+                target="_blank"
+                onclick="increaseDownload('physics')">
+
+                Download
+
+            </a>
+
+            <br><br>
+
+            <button
+                class="secondary-btn"
+                onclick="window.open('physics-unit1.pdf')">
+
+                Preview PDF
+
+            </button>
+
+            <br><br>
+
+            <p id="physicsCount">
+                Downloads: 0
+            </p>
+
+            <div class="stars">
+
+                <span class="star"
+                onclick="rateNote('physics',1)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('physics',2)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('physics',3)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('physics',4)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('physics',5)">⭐</span>
+
+            </div>
+
+        </div>
+
+        <!-- CHEMISTRY -->
+
+        <div
+            class="card note-card"
+            data-subject="chemistry">
+
+            <img src="chemistry.jpeg">
+
+            <h2>Chemistry</h2>
+
+            <p>Unit 1 Complete Notes</p>
+
+            <a
+                href="chemistry-unit1.pdf"
+                class="download-btn"
+                target="_blank"
+                onclick="increaseDownload('chemistry')">
+
+                Download
+
+            </a>
+
+            <br><br>
+
+            <button
+                class="secondary-btn"
+                onclick="window.open('chemistry-unit1.pdf')">
+
+                Preview PDF
+
+            </button>
+
+            <br><br>
+
+            <p id="chemistryCount">
+                Downloads: 0
+            </p>
+
+            <div class="stars">
+
+                <span class="star"
+                onclick="rateNote('chemistry',1)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('chemistry',2)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('chemistry',3)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('chemistry',4)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('chemistry',5)">⭐</span>
+
+            </div>
+
+        </div>
+
+        <!-- PROGRAMMING -->
+
+        <div
+            class="card note-card"
+            data-subject="programming">
+
+            <img src="programming.jpeg">
+
+            <h2>Programming</h2>
+
+            <p>C Programming Notes</p>
+
+            <a
+                href="programming-unit1.pdf"
+                class="download-btn"
+                target="_blank"
+                onclick="increaseDownload('programming')">
+
+                Download
+
+            </a>
+
+            <br><br>
+
+            <button
+                class="secondary-btn"
+                onclick="window.open('programming-unit1.pdf')">
+
+                Preview PDF
+
+            </button>
+
+            <br><br>
+
+            <p id="programmingCount">
+                Downloads: 0
+            </p>
+
+            <div class="stars">
+
+                <span class="star"
+                onclick="rateNote('programming',1)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('programming',2)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('programming',3)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('programming',4)">⭐</span>
+
+                <span class="star"
+                onclick="rateNote('programming',5)">⭐</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>College Notes Portal</h3>
+
+        <br>
+
+        <p>
+            Learn • Share • Grow
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        showDownloadCount(
+            "mathCount",
+            "math"
+        );
+
+        showDownloadCount(
+            "physicsCount",
+            "physics"
+        );
+
+        showDownloadCount(
+            "chemistryCount",
+            "chemistry"
+        );
+
+        showDownloadCount(
+            "programmingCount",
+            "programming"
+        );
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <img src="logo.jpeg" class="logo">
+
+        <h1>Student Dashboard</h1>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="notes.html">Notes</a>
+
+            <a href="upload.html">Upload</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="#" onclick="logout()">Logout</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h2 id="welcomeUser">
+            Welcome Student 👋
+        </h2>
+
+        <p>
+            Manage your learning activities from one place.
+        </p>
+
+    </section>
+
+    <!-- PROFILE SUMMARY -->
+
+    <section class="dashboard">
+
+        <div class="dashboard-grid">
+
+            <div class="card">
+
+                <h2>👤 Student Name</h2>
+
+                <br>
+
+                <p id="dashName">
+                    Loading...
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>🆔 Roll Number</h2>
+
+                <br>
+
+                <p id="dashRoll">
+                    Loading...
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>🏫 Department</h2>
+
+                <br>
+
+                <p id="dashDepartment">
+                    Loading...
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>📧 Email</h2>
+
+                <br>
+
+                <p id="dashEmail">
+                    Loading...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- QUICK STATS -->
+
+    <section class="stats">
+
+        <div class="stat-box">
+
+            <h2>📚</h2>
+
+            <p>Total Notes Accessed</p>
+
+            <h3>15+</h3>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>📥</h2>
+
+            <p>Total Downloads</p>
+
+            <h3>25+</h3>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>⭐</h2>
+
+            <p>Ratings Given</p>
+
+            <h3>10+</h3>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>🎯</h2>
+
+            <p>Learning Progress</p>
+
+            <h3>85%</h3>
+
+        </div>
+
+    </section>
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="dashboard">
+
+        <h2 style="text-align:center;">
+            Quick Actions
+        </h2>
+
+        <br>
+
+        <div class="dashboard-grid">
+
+            <div class="card">
+
+                <h2>📚 Notes Library</h2>
+
+                <br>
+
+                <p>
+                    Browse all available notes.
+                </p>
+
+                <br>
+
+                <button
+                    class="primary-btn"
+                    onclick="window.location.href='notes.html'">
+
+                    Open Notes
+
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h2>📤 Upload Notes</h2>
+
+                <br>
+
+                <p>
+                    Share study materials.
+                </p>
+
+                <br>
+
+                <button
+                    class="primary-btn"
+                    onclick="window.location.href='upload.html'">
+
+                    Upload
+
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h2>👤 My Profile</h2>
+
+                <br>
+
+                <p>
+                    View and manage profile.
+                </p>
+
+                <br>
+
+                <button
+                    class="primary-btn"
+                    onclick="window.location.href='profile.html'">
+
+                    Open Profile
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RECENT ACTIVITY -->
+
+    <section class="dashboard">
+
+        <h2 style="text-align:center;">
+            Recent Activity
+        </h2>
+
+        <br>
+
+        <div class="dashboard-grid">
+
+            <div class="card">
+
+                <h2>📄 Physics Notes</h2>
+
+                <p>
+                    Downloaded recently
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>📄 Mathematics Notes</h2>
+
+                <p>
+                    Rated 5 Stars
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>📤 Programming Notes</h2>
+
+                <p>
+                    Uploaded Successfully
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>College Notes Portal</h3>
+
+        <br>
+
+        <p>
+            Student Dashboard
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        document.getElementById("dashName").innerHTML =
+        localStorage.getItem("studentName") || "Not Available";
+
+        document.getElementById("dashRoll").innerHTML =
+        localStorage.getItem("rollNo") || "Not Available";
+
+        document.getElementById("dashDepartment").innerHTML =
+        localStorage.getItem("department") || "Not Available";
+
+        document.getElementById("dashEmail").innerHTML =
+        localStorage.getItem("studentEmail") || "Not Available";
+
+    </script>
+
+</body>
+
+</html>
